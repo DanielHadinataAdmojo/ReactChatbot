@@ -1,0 +1,7 @@
+import React from "react";
+import styles from "./LoaderDebug.module.css";
+
+export function Loading() {
+  console.log("Loading component rendered with debug styles");
+  return <div className={styles.loader} />;
+}

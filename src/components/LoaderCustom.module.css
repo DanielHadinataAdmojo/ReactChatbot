@@ -1,0 +1,28 @@
+:root {
+  --loader-width: 120px;
+  --loader-height: 22px;
+  --loader-color: #514b82;
+  --loader-border-width: 2px;
+  --loader-border-radius: 20px;
+}
+
+.loader {
+  width: var(--loader-width);
+  height: var(--loader-height);
+  border-radius: var(--loader-border-radius);
+  color: var(--loader-color);
+  border: var(--loader-border-width) solid;
+  position: relative;
+}
+.loader::before {
+  content: "";
+  position: absolute;
+  margin: var(--loader-border-width);
+  inset: 0 100% 0 0;
+  border-radius: inherit;
+  background: currentColor;
+  animation: l6 2s infinite;
+}
+@keyframes l6 {
+    100% {inset:0}
+}
