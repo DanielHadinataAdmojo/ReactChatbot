@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { Chat } from "./components/Chat/Chat";
 import { Controls } from "./components/Controls/Controls";
-import { Loading } from "./components/Loading";
 import styles from "./App.module.css";
 
 function App() {
