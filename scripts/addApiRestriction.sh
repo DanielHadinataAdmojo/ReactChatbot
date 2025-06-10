@@ -1,6 +1,6 @@
 #!/bin/bash
 # Script to add API restrictions to a Google Cloud API key
-# Replace PROJECT_NUMBER and KEY_ID with your values before running
+
 
 if [ "$#" -ne 2 ]; then
   echo "Usage: $0 PROJECT_NUMBER KEY_ID"
