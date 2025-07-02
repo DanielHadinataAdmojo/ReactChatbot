@@ -1,0 +1,39 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Light theme colors */
+  --color-text: #0d0d0d;
+  --color-background: #f3f3f3;
+  --color-chat-background: #ffffff;
+  --color-message-text: #0d0d0d;
+  --color-message-background: #e0e0e0;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[data-theme="dark"] {
+  /* Dark theme colors */
+  --color-text: #bfbfbf; /* Adjusted to a slightly darker shade for better readability */
+  --color-background: #121212;
+  --color-chat-background: #1e1e1e;
+  --color-message-text: #d0d0d0;
+  --color-message-background: #2a2a2a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  max-width: 640px;
+  min-height: 100vh;
+  margin: 0 auto;
+  color: var(--color-text);
+  background: var(--color-background);
+}

@@ -1,0 +1,44 @@
+.loadingBarContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: Arial, sans-serif;
+  color: #514b82;
+}
+
+.loadingBar {
+  width: 120px;
+  height: 22px;
+  border-radius: 20px;
+  border: 2px solid #514b82;
+  position: relative;
+  overflow: hidden;
+}
+
+.loadingProgress {
+  height: 100%;
+  width: 0;
+  background-color: #514b82;
+  border-radius: 20px;
+  animation: loadingProgressAnim 2s infinite;
+}
+
+@keyframes loadingProgressAnim {
+  0% {
+    width: 0;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+.loadingText {
+  font-size: 14px;
+  font-weight: 600;
+}

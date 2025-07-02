@@ -1,0 +1,129 @@
+.Controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 12px;
+}
+
+.VerticalButtonContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.QuickReplyButton {
+  padding: 8px 16px;
+  border: 1px solid #1a73e8;
+  border-radius: 20px;
+  background-color: #ffffff;
+  color: #1a73e8;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.QuickReplyButton:hover {
+  background-color: #e8f0fe;
+}
+
+.Selected {
+  background-color: #1a73e8;
+  color: #ffffff;
+  border-color: #1a73e8;
+}
+
+.TextAreaContainer {
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+}
+
+.TextArea {
+  width: 100%;
+  height: 80px;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  padding: 12px 48px 12px 16px; /* extra right padding for button */
+  font-size: 16px;
+  resize: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.Button {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: #1a73e8;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Button svg {
+  fill: white;
+}
+
+.ThemeToggleButton {
+  margin-top: 8px;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: #f1f3f4;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ThemeToggleButtonLight {
+  background: #1a73e8;
+  color: white;
+}
+
+.ThemeToggleButtonDark {
+  background: #f1f3f4;
+  color: #202124;
+}
+
+.ClearChatButton {
+  margin-left: 8px;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: #f44336;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s ease;
+}
+
+.ButtonsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.ClearChatButton:hover {
+  background: #d32f2f;
+}

@@ -1,0 +1,11 @@
+import React from "react";
+import styles from "./LoadingMessage.module.css";
+
+export function LoadingMessage() {
+  return (
+    <div className={styles.loadingMessage}>
+      <div className={styles.spinner} />
+      <span className={styles.text}>Just a sec...</span>
+    </div>
+  );
+}
