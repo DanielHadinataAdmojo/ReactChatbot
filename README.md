@@ -1,6 +1,17 @@
+
 # AI Chatbot
 
 This project is a React-based AI Chatbot application that leverages Google's Generative AI model to provide interactive chat functionality. It features a user-friendly interface with message display, loading indicators, and supports light/dark theme toggling. Users can send messages and receive AI-generated responses in real-time.
+
+## Updates in this version
+
+- Upgraded to Google's Generative AI Gemini 2.5 model for improved chat responses.
+- Added persistent chat history saved and loaded from localStorage.
+- Introduced prompt templates for quick message formatting (e.g., summarize, explain like I'm 5).
+- Added clear chat functionality to reset conversation history.
+- Enhanced UI with loading indicators during AI response generation.
+- Added dark/light theme toggle support.
+- Updated Controls component with additional buttons and improved UX.
 
 ## Prerequisites
 
