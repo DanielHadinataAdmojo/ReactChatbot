@@ -1,31 +1,28 @@
 .Chat {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
   height: 100%;
-  padding: 16px;
+  padding: 8px;
   overflow-y: auto;
-  background: var(--color-background);
+  background: var(--color-chat-background);
 }
 
 .Message {
-  width: 100%;
-  max-width: 600px;
-  padding: 16px 20px;
-  border-radius: 12px;
-  font-size: 15px;
+  width: 90%;
+  padding: 0 16px;
+  border-radius: 16px;
+  font-size: 14px;
   color: var(--color-message-text);
-  background: var(--color-message-background);
-  margin-top: 12px;
-  margin-bottom: 12px;
-  box-shadow: 0 1px 3px rgba(60,64,67,0.15), 0 4px 8px rgba(60,64,67,0.1);
-  align-self: flex-start;
+  background: transparent;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 .Message[data-role="user"] {
-  align-self: flex-start;
+  align-self: flex-end;
   background: var(--color-message-background);
-  color: var(--color-message-text);
+  color: var(--color-text);
 }
 
 .markdownContent h1,

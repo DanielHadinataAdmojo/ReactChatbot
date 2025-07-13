@@ -12,7 +12,6 @@ const PROMPT_TEMPLATES = {
 export function Controls({ onSend, loading, onToggleTheme, currentTheme, onClearChat }) {
   const [content, setContent] = useState("");
   const [selectedTemplate, setSelectedTemplate] = useState("none");
-  const [showTemplates, setShowTemplates] = useState(false);
 
   // Load saved unsent prompt content from localStorage on mount
   useEffect(() => {
@@ -37,7 +36,6 @@ export function Controls({ onSend, loading, onToggleTheme, currentTheme, onClear
 
   function handleTemplateClick(templateKey) {
     setSelectedTemplate(templateKey);
-    setShowTemplates(false);
   }
 
   function handleContentSend() {
@@ -59,6 +57,28 @@ export function Controls({ onSend, loading, onToggleTheme, currentTheme, onClear
 
   return (
     <div className={styles.Controls}>
+      <div className={styles.VerticalButtonContainer}>
+        {Object.entries(PROMPT_TEMPLATES).map(([key]) => (
+          <button
+            key={key}
+            type="button"
+            className={`${styles.QuickReplyButton} ${
+              selectedTemplate === key ? styles.Selected : ""
+            }`}
+            onClick={() => handleTemplateClick(key)}
+          >
+            {key === "none"
+              ? "None"
+              : key === "summarize"
+              ? "Summarize"
+              : key === "explainLike5"
+              ? "Explain like I'm 5"
+              : key === "breakDownSimply"
+              ? "Break it down simply"
+              : key}
+          </button>
+        ))}
+      </div>
       <div className={styles.TextAreaContainer}>
         <textarea
           className={styles.TextArea}
@@ -72,42 +92,13 @@ export function Controls({ onSend, loading, onToggleTheme, currentTheme, onClear
           <SendIcon />
         </button>
       </div>
-      <div className={styles.TemplateDropdown}>
-        <button
-          type="button"
-          className={styles.TemplateToggleButton}
-          onClick={() => setShowTemplates(!showTemplates)}
-          aria-expanded={showTemplates}
-          aria-controls="template-list"
-        >
-          Templates {showTemplates ? "▲" : "▼"}
-        </button>
-        {showTemplates && (
-          <div id="template-list" className={styles.TemplateList}>
-            {Object.entries(PROMPT_TEMPLATES).map(([key]) => (
-              <button
-                key={key}
-                type="button"
-                className={`${styles.QuickReplyButton} ${selectedTemplate === key ? styles.Selected : ""}`}
-                onClick={() => handleTemplateClick(key)}
-              >
-                {key === "none"
-                  ? "None"
-                  : key === "summarize"
-                  ? "Summarize"
-                  : key === "explainLike5"
-                  ? "Explain like I'm 5"
-                  : key === "breakDownSimply"
-                  ? "Break it down simply"
-                  : key}
-              </button>
-            ))}
-          </div>
-        )}
-      </div>
       <div className={styles.ButtonsContainer}>
         <button
-          className={`${styles.ThemeToggleButton} ${currentTheme === "light" ? styles.ThemeToggleButtonLight : styles.ThemeToggleButtonDark}`}
+          className={`${styles.ThemeToggleButton} ${
+            currentTheme === "light"
+              ? styles.ThemeToggleButtonLight
+              : styles.ThemeToggleButtonDark
+          }`}
           onClick={onToggleTheme}
           aria-label="Toggle dark/light theme"
         >

@@ -1,3 +1,4 @@
+
 # AI Chatbot
 
 This project is a React-based AI Chatbot application that leverages Google's Generative AI model to provide interactive chat functionality. It features a user-friendly interface with message display, loading indicators, and supports light/dark theme toggling. Users can send messages and receive AI-generated responses in real-time.
@@ -11,7 +12,6 @@ This project is a React-based AI Chatbot application that leverages Google's Gen
 - Enhanced UI with loading indicators during AI response generation.
 - Added dark/light theme toggle support.
 - Updated Controls component with additional buttons and improved UX.
-- Removed API key from code and moved to environment variable for security.
 
 ## Prerequisites
 

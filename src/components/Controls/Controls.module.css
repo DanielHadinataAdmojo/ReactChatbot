@@ -2,59 +2,137 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
   width: 100%;
-  padding: 12px;
+  padding: 16px;
+  background: var(--color-background);
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(60,64,67,0.15), 0 4px 8px rgba(60,64,67,0.1);
+}
+
+.TemplateDropdown {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto 12px auto;
+  text-align: left;
+}
+
+.TemplateToggleButton {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid #3b82f6;
+  border-radius: 12px;
+  background-color: var(--color-chat-background);
+  color: var(--color-text);
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(59,130,246,0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.TemplateToggleButton:hover {
+  background-color: #e0e7ff;
+}
+
+.TemplateList {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-height: 150px;
+  overflow-y: auto;
+  border: 1px solid #3b82f6;
+  border-radius: 12px;
+  padding: 8px;
+  background-color: var(--color-chat-background);
+  box-shadow: 0 2px 6px rgba(59,130,246,0.3);
+}
+
+.QuickReplyButton {
+  padding: 6px 12px;
+  border: 1px solid #3b82f6;
+  border-radius: 12px;
+  background-color: var(--color-chat-background);
+  color: var(--color-text);
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 13px;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 1px 2px rgba(59,130,246,0.2);
+}
+
+.QuickReplyButton:hover {
+  background-color: #e0e7ff;
+}
+
+.Selected {
+  background-color: #3b82f6;
+  color: #ffffff;
+  border-color: #3b82f6;
+  box-shadow: 0 2px 6px rgba(59,130,246,0.4);
 }
 
 .VerticalButtonContainer {
   display: flex;
-  flex-direction: column;
-  gap: 8px;
+  flex-wrap: wrap;
+  gap: 12px;
   width: 100%;
-  max-width: 300px;
+  max-width: 700px;
   margin: 0 auto;
+  justify-content: center;
 }
 
 .QuickReplyButton {
-  padding: 8px 16px;
-  border: 1px solid #1a73e8;
-  border-radius: 20px;
-  background-color: #ffffff;
-  color: #1a73e8;
+  padding: 10px 20px;
+  border: 1px solid #3b82f6;
+  border-radius: 12px;
+  background-color: var(--color-chat-background);
+  color: var(--color-text);
   font-weight: 600;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 15px;
   text-align: center;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 1px 2px rgba(59,130,246,0.2);
 }
 
 .QuickReplyButton:hover {
-  background-color: #e8f0fe;
+  background-color: #e0e7ff;
 }
 
 .Selected {
-  background-color: #1a73e8;
+  background-color: #3b82f6;
   color: #ffffff;
-  border-color: #1a73e8;
+  border-color: #3b82f6;
+  box-shadow: 0 2px 6px rgba(59,130,246,0.4);
 }
 
 .TextAreaContainer {
   width: 100%;
-  max-width: 600px;
+  max-width: 700px;
   position: relative;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(60,64,67,0.15), 0 4px 8px rgba(60,64,67,0.1);
+  background: var(--color-chat-background);
 }
 
 .TextArea {
   width: 100%;
   height: 80px;
-  border: 1px solid #ccc;
-  border-radius: 16px;
+  border: none;
+  border-radius: 12px;
   padding: 12px 48px 12px 16px; /* extra right padding for button */
   font-size: 16px;
   resize: none;
   outline: none;
   box-sizing: border-box;
+  background: transparent;
+  color: var(--color-text);
 }
 
 .Button {
@@ -65,12 +143,13 @@
   height: 36px;
   border: none;
   border-radius: 50%;
-  background: #1a73e8;
+  background: #3b82f6;
   color: white;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 2px 6px rgba(59,130,246,0.4);
 }
 
 .Button svg {
@@ -83,22 +162,24 @@
   height: 36px;
   border: none;
   border-radius: 50%;
-  background: #f1f3f4;
+  background: var(--color-chat-background);
   cursor: pointer;
   font-size: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--color-text);
+  box-shadow: 0 1px 2px rgba(59,130,246,0.2);
 }
 
 .ThemeToggleButtonLight {
-  background: #1a73e8;
+  background: #3b82f6;
   color: white;
 }
 
 .ThemeToggleButtonDark {
-  background: #f1f3f4;
-  color: #202124;
+  background: var(--color-chat-background);
+  color: var(--color-text);
 }
 
 .ClearChatButton {
@@ -107,7 +188,7 @@
   height: 36px;
   border: none;
   border-radius: 50%;
-  background: #f44336;
+  background: #ef4444;
   color: white;
   cursor: pointer;
   font-size: 18px;
@@ -115,15 +196,24 @@
   justify-content: center;
   align-items: center;
   transition: background-color 0.2s ease;
+  box-shadow: 0 2px 6px rgba(239,68,68,0.4);
 }
 
 .ButtonsContainer {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
+  padding-left: 8px;
+}
+
+.ThemeToggleButtonDark {
+  background: #3b82f6;
+  color: white;
+  box-shadow: 0 2px 6px rgba(59,130,246,0.6);
 }
 
 .ClearChatButton:hover {
-  background: #d32f2f;
+  background: #dc2626;
+  box-shadow: 0 3px 8px rgba(220,38,38,0.6);
 }
